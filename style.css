@@ -1,0 +1,188 @@
+:root {
+  --azul: #12324a;
+  --azul-escuro: #091d2c;
+  --dourado: #c89542;
+  --claro: #f4f6f7;
+  --texto: #26323a;
+  --branco: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+.container {
+  width: min(1120px, 90%);
+  margin: 0 auto;
+}
+
+.topo {
+  background: var(--azul-escuro);
+  color: var(--branco);
+  padding: 20px 0;
+}
+
+.topo .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: var(--branco);
+  text-decoration: none;
+}
+
+.hero {
+  background:
+    linear-gradient(rgba(9, 29, 44, .78), rgba(9, 29, 44, .78)),
+    url("imagens/foto-principal.jpg") center/cover;
+  color: var(--branco);
+  padding: 130px 0;
+}
+
+.hero h1 {
+  max-width: 780px;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.1;
+  margin: 15px 0;
+}
+
+.hero p:not(.etiqueta) {
+  max-width: 650px;
+  font-size: 1.15rem;
+}
+
+.etiqueta {
+  color: var(--dourado);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: .85rem;
+  font-weight: bold;
+}
+
+.botao {
+  display: inline-block;
+  background: var(--dourado);
+  color: var(--branco);
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.secao {
+  padding: 80px 0;
+}
+
+.secao h2 {
+  color: var(--azul);
+  font-size: 2.2rem;
+  margin-top: 8px;
+}
+
+.secao-cinza {
+  background: var(--claro);
+}
+
+.secao-cinza p:not(.etiqueta) {
+  max-width: 760px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 35px;
+}
+
+.card {
+  border: 1px solid #e1e5e8;
+  padding: 28px;
+  border-radius: 8px;
+  background: var(--branco);
+}
+
+.card h3 {
+  color: var(--azul);
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.galeria img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.contatos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.contatos a {
+  background: var(--azul);
+  color: var(--branco);
+  padding: 14px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+footer {
+  background: var(--azul-escuro);
+  color: var(--branco);
+  padding: 25px 0;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .topo .container,
+  nav {
+    flex-direction: column;
+  }
+
+  .hero {
+    padding: 90px 0;
+  }
+
+  .cards,
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+
+  .galeria img {
+    height: 220px;
+  }
+}
