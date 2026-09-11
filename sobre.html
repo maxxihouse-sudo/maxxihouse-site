@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre Nós | MaxxiHouse Avaliações & Projetos</title>
-  <meta name="description" content="Conheça a história e o corpo técnico multidisciplinar da MaxxiHouse. Engenharia Civil, Arquitetura e Urbanismo com credenciamento CREA-SP e CAU-BR.">
+  <title>Sobre Nós & Sócios | MaxxiHouse Avaliações & Projetos</title>
+  <meta name="description" content="Conheça a trajetória e as qualificações do corpo técnico e sócios da MaxxiHouse. Engenharia Civil, Arquitetura e Urbanismo com credenciamento CREA-SP e CAU-BR.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -19,31 +19,39 @@
     .team-card {
       background: var(--branco);
       border-radius: 16px;
-      padding: 36px 28px;
-      text-align: center;
+      padding: 36px 26px;
+      text-align: left;
       box-shadow: var(--sombra-card);
       border: 1px solid var(--cinza-borda);
       transition: var(--transicao);
       display: flex;
       flex-direction: column;
-      align-items: center;
     }
     .team-card:hover {
       transform: translateY(-8px);
       box-shadow: var(--sombra-hover);
       border-color: var(--dourado);
     }
+    .team-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 22px;
+      border-bottom: 1px solid var(--cinza-borda);
+      padding-bottom: 18px;
+    }
     .team-avatar {
-      width: 96px;
-      height: 96px;
+      width: 90px;
+      height: 90px;
       border-radius: 50%;
       background: linear-gradient(135deg, var(--azul-marinho), #1A365D);
       color: var(--dourado);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2.5rem;
-      margin-bottom: 22px;
+      font-size: 2.4rem;
+      margin-bottom: 18px;
       border: 3px solid var(--dourado);
       box-shadow: 0 6px 15px rgba(10, 35, 66, 0.15);
     }
@@ -57,7 +65,7 @@
       color: var(--dourado-escuro);
       font-weight: 600;
       font-size: 0.95rem;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
@@ -69,15 +77,41 @@
       color: var(--cinza-grafite);
       font-size: 0.8rem;
       font-weight: 600;
-      padding: 6px 12px;
+      padding: 5px 12px;
       border-radius: 50px;
-      margin-bottom: 18px;
       border: 1px solid var(--cinza-borda);
     }
-    .team-bio {
+    .team-qualifications {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-size: 0.9rem;
       color: var(--texto-suave);
-      font-size: 0.92rem;
-      line-height: 1.65;
+      line-height: 1.55;
+    }
+    .team-qualifications li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .team-qualifications li i {
+      color: var(--dourado);
+      margin-top: 4px;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+    .team-highlight {
+      background: #FDFBF4;
+      border: 1px dashed var(--dourado);
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 18px;
+      font-size: 0.85rem;
+      color: #5A4A14;
+      line-height: 1.5;
     }
     .values-grid {
       display: grid;
@@ -126,7 +160,7 @@
         <a href="index.html#inicio">Início</a>
         <a href="sobre.html" style="color:var(--dourado);font-weight:600;">Sobre Nós</a>
         <a href="index.html#servicos">Serviços</a>
-        <a href="index.html#galeria">Projetos</a>
+        <a href="index.html#apresentacao">Projetos</a>
         <a href="index.html#metodologia">Metodologia</a>
         <a href="index.html#faq">FAQ</a>
         <a href="index.html#orcamento" class="btn btn-primary" style="padding:8px 18px;font-size:0.88rem;">Solicitar Orçamento</a>
@@ -138,14 +172,14 @@
   </header>
 
   <!-- HERO SOBRE -->
-  <section class="hero" style="padding: 70px 0 80px;">
-    <div class="container" style="text-align: center; max-width: 850px;">
+  <section class="hero" style="padding: 75px 0 85px;">
+    <div class="container" style="text-align: center; max-width: 900px;">
       <div class="hero-tag" style="margin: 0 auto 20px;">
-        <i class="fa-solid fa-users"></i> Corpo Técnico & Sócios
+        <i class="fa-solid fa-users"></i> Corpo Técnico Multidisciplinar
       </div>
-      <h1 style="font-size: 2.6rem; margin-bottom: 20px;">Excelência técnica unindo Engenharia e Arquitetura</h1>
-      <p style="margin: 0 auto 30px; font-size: 1.15rem;">A MaxxiHouse nasceu para oferecer rigor metodológico, fundamentação normativa e soluções completas em perícias, avaliações patrimoniais e projetos integrados.</p>
-      <a href="#equipe" class="btn btn-primary"><i class="fa-solid fa-arrow-down"></i> Conheça nossos sócios</a>
+      <h1 style="font-size: 2.6rem; margin-bottom: 20px;">Engenharia Civil, Arquitetura e Urbanismo</h1>
+      <p style="margin: 0 auto 30px; font-size: 1.15rem;">Mais de 18 anos de experiência na construção civil, unindo sólida fundamentação científica, inferência estatística avançada e excelência em projetos e perícias.</p>
+      <a href="#equipe" class="btn btn-primary"><i class="fa-solid fa-arrow-down"></i> Conheça os sócios e qualificações</a>
     </div>
   </section>
 
@@ -156,24 +190,24 @@
         <span class="section-tag">Institucional</span>
         <h2>A MaxxiHouse</h2>
       </div>
-      <p class="section-text">A <strong>MaxxiHouse Avaliações & Projetos</strong> atua de maneira multidisciplinar, reunindo profissionais com sólida formação e ampla vivência nas áreas de <strong>Engenharia Civil</strong>, <strong>Arquitetura</strong> e <strong>Urbanismo</strong>.</p>
-      <p class="section-text">Nossa atuação é pautada estritamente pelas normas técnicas da ABNT (especialmente as séries NBR 14.653 e NBR 13.752) e pelas melhores práticas de engenharia diagnóstica, garantindo aos nossos clientes total tranquilidade em processos judiciais, negociações imobiliárias, partilhas, inventários e execuções de obras.</p>
+      <p class="section-text">A <strong>MaxxiHouse Avaliações & Projetos</strong> atua de maneira multidisciplinar, reunindo profissionais altamente especializados em <strong>Engenharia Civil</strong>, <strong>Arquitetura</strong> e <strong>Urbanismo</strong>.</p>
+      <p class="section-text">Nossa atuação é pautada estritamente pelas normas técnicas da ABNT (especialmente as séries NBR 14.653 e NBR 13.752) e pelas melhores práticas de engenharia diagnóstica, garantindo aos nossos clientes total segurança jurídica e patrimonial em laudos de avaliação, vistorias, consultoria condominial e execução de projetos estruturais e arquitetônicos.</p>
 
       <div class="values-grid">
         <div class="value-card">
-          <i class="fa-solid fa-balance-scale"></i>
-          <h4>Precisão & Normas</h4>
-          <p>Laudos fundamentados cientificamente por inferência estatística e conformidade com as diretrizes da ABNT.</p>
+          <i class="fa-solid fa-building-columns"></i>
+          <h4>10 Anos para Bancos Públicos</h4>
+          <p>Experiência de 10 anos prestando serviços técnicos especializados para a <strong>Caixa Econômica Federal</strong> e o <strong>Banco do Brasil</strong> junto com seus sócios.</p>
         </div>
         <div class="value-card">
           <i class="fa-solid fa-user-shield"></i>
           <h4>Responsabilidade Técnica</h4>
-          <p>Todos os laudos e projetos possuem Anotação de Responsabilidade Técnica (ART/RRT) registrada no CREA-SP e CAU-BR.</p>
+          <p>Corpo técnico registrado com credenciamento ativo perante o <strong>CREA-SP</strong> e o <strong>CAU-BR</strong>.</p>
         </div>
         <div class="value-card">
-          <i class="fa-solid fa-handshake-angle"></i>
-          <h4>Abordagem Multidisciplinar</h4>
-          <p>Visão integrada entre engenharia civil diagnóstica e soluções arquitetônicas e urbanísticas sob medida.</p>
+          <i class="fa-solid fa-chart-line"></i>
+          <h4>Cálculo Avançado</h4>
+          <p>Certificação avançada em inferência estatística e regressão multivariada aplicada a avaliações imobiliárias.</p>
         </div>
       </div>
     </div>
@@ -185,47 +219,82 @@
       <div class="section-title-wrap">
         <span class="section-tag">Nossa Liderança</span>
         <h2>Sócios & Corpo Técnico</h2>
-        <p class="section-text">Profissionais qualificados com registro nos principais conselhos de classe do país.</p>
+        <p class="section-text">Conheça a formação e as especializações dos profissionais responsáveis pelos laudos, perícias e projetos da MaxxiHouse.</p>
       </div>
 
       <div class="team-grid">
         <!-- DANIEL CARVALHO -->
         <div class="team-card">
-          <div class="team-avatar">
-            <i class="fa-solid fa-user-gear"></i>
+          <div class="team-header">
+            <div class="team-avatar">
+              <i class="fa-solid fa-user-gear"></i>
+            </div>
+            <h3>Daniel Carvalho</h3>
+            <span class="team-role">Engenheiro Civil</span>
+            <div class="team-badge">
+              <i class="fa-solid fa-id-badge"></i> Registro CREA-SP
+            </div>
           </div>
-          <h3>Daniel Carvalho</h3>
-          <span class="team-role">Engenheiro Civil</span>
-          <div class="team-badge">
-            <i class="fa-solid fa-id-badge"></i> Registro CREA-SP
+          <ul class="team-qualifications">
+            <li><i class="fa-solid fa-check-circle"></i> Pós-graduado em Engenharia Diagnóstica (Avaliações e Perícias).</li>
+            <li><i class="fa-solid fa-check-circle"></i> Pós-graduado em Sistemas Construtivos de Edificações.</li>
+            <li><i class="fa-solid fa-check-circle"></i> Habilitado com certificação pela Start Engenharia Estrutural (Desenho e Projeto Estrutural).</li>
+            <li><i class="fa-solid fa-check-circle"></i> Técnico em Construção Civil pelo SENAI.</li>
+            <li><i class="fa-solid fa-check-circle"></i> Certificação de Cálculo Avançado em Inferência Estatística aplicada a Avaliações de Imóveis (Módulo Avançado pela Pellisistemas).</li>
+            <li><i class="fa-solid fa-check-circle"></i> Atua há mais de 18 anos no ramo da construção civil.</li>
+            <li><i class="fa-solid fa-check-circle"></i> Atua como auditor técnico de suas empresas.</li>
+          </ul>
+          <div class="team-highlight">
+            <i class="fa-solid fa-award"></i> <strong>Histórico Institucional:</strong> Prestou serviços técnicos para a Caixa Econômica Federal e o Banco do Brasil por 10 anos junto com seus sócios.
           </div>
-          <p class="team-bio">Especialista em avaliações imobiliárias com metodologia ABNT NBR 14.653, inferência estatística, engenharia diagnóstica, perícias prediais, vistorias técnicas e acompanhamento de obras.</p>
-        </div>
-
-        <!-- SYGLIA MENDONÇA -->
-        <div class="team-card">
-          <div class="team-avatar">
-            <i class="fa-solid fa-compass-drafting"></i>
-          </div>
-          <h3>Syglia Mendonça</h3>
-          <span class="team-role">Arquiteta e Urbanista</span>
-          <div class="team-badge">
-            <i class="fa-solid fa-id-badge"></i> Registro CAU-BR
-          </div>
-          <p class="team-bio">Especialista em desenvolvimento de projetos arquitetônicos residenciais e comerciais, planejamento de espaços, regularização imobiliária perante órgãos municipais e viabilidade urbanística.</p>
         </div>
 
         <!-- DOMINGOS LOPES -->
         <div class="team-card">
-          <div class="team-avatar">
-            <i class="fa-solid fa-city"></i>
+          <div class="team-header">
+            <div class="team-avatar">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+            <h3>Domingos Lopes</h3>
+            <span class="team-role">Arquiteto e Urbanista</span>
+            <div class="team-badge">
+              <i class="fa-solid fa-id-badge"></i> Registro CAU-BR
+            </div>
           </div>
-          <h3>Domingos Lopes</h3>
-          <span class="team-role">Arquiteto e Urbanista</span>
-          <div class="team-badge">
-            <i class="fa-solid fa-id-badge"></i> Registro CAU-BR
+          <ul class="team-qualifications">
+            <li><i class="fa-solid fa-check-circle"></i> Especialista em Luminotécnica.</li>
+            <li><i class="fa-solid fa-check-circle"></i> Avaliador e Perito Técnico em Arquitetura e Urbanismo.</li>
+            <li><i class="fa-solid fa-check-circle"></i> Vistorias técnicas, identificação de manifestações patológicas e análise construtiva.</li>
+            <li><i class="fa-solid fa-check-circle"></i> Compatibilização técnica de projetos e consultoria para condomínios residenciais e comerciais.</li>
+            <li><i class="fa-solid fa-check-circle"></i> Vistorias de entrega de unidades autônomas e verificação de memoriais descritivos.</li>
+          </ul>
+          <div class="team-highlight">
+            <i class="fa-solid fa-award"></i> <strong>Histórico Institucional:</strong> Ampla experiência em perícias, laudos técnicos e consultoria arquitetônica especializada.
           </div>
-          <p class="team-bio">Especialista em compatibilização técnica de projetos, vistorias minuciosas de entrega de unidades autônomas, análise de diretrizes para condomínios e consultoria arquitetônica.</p>
+        </div>
+
+        <!-- SYGLIA MENDONÇA -->
+        <div class="team-card">
+          <div class="team-header">
+            <div class="team-avatar">
+              <i class="fa-solid fa-cube"></i>
+            </div>
+            <h3>Syglia Mendonça</h3>
+            <span class="team-role">Arquiteta e Urbanista</span>
+            <div class="team-badge">
+              <i class="fa-solid fa-id-badge"></i> Registro CAU-BR
+            </div>
+          </div>
+          <ul class="team-qualifications">
+            <li><i class="fa-solid fa-check-circle"></i> Especialista em Projetos Executivos e Modelagem 3D.</li>
+            <li><i class="fa-solid fa-check-circle"></i> Avaliadora Imobiliária e Analista Pericial.</li>
+            <li><i class="fa-solid fa-check-circle"></i> Desenvolvimento de projetos arquitetônicos residenciais e comerciais de alta precisão.</li>
+            <li><i class="fa-solid fa-check-circle"></i> Planejamento espacial, estudo de insolação e regularização imobiliária municipal.</li>
+            <li><i class="fa-solid fa-check-circle"></i> Suporte pericial em conformidade de projetos e viabilidade urbanística.</li>
+          </ul>
+          <div class="team-highlight">
+            <i class="fa-solid fa-award"></i> <strong>Histórico Institucional:</strong> Experiência no desenvolvimento de projetos integrados e análises periciais documentais.
+          </div>
         </div>
       </div>
     </div>
@@ -268,7 +337,7 @@
 
       <div class="footer-col">
         <h3>Qualificações</h3>
-        <p><i class="fa-solid fa-certificate"></i> Registro CREA-SP & CAU-BR</p>
+        <p><i class="fa-solid fa-certificate"></i> Registros CREA-SP & CAU-BR</p>
         <p><i class="fa-solid fa-book"></i> Normas ABNT NBR 14.653</p>
         <p><i class="fa-solid fa-location-dot"></i> Atendimento em São Paulo & Região</p>
       </div>

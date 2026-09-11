@@ -31,6 +31,69 @@
     });
   }
 
+  // Slide Viewer / Apresentação de Serviços (Enquadramento Perfeito 16:9)
+  const slides = document.querySelectorAll('.slide-slide');
+  const prevBtn = document.getElementById('prevSlide');
+  const nextBtn = document.getElementById('nextSlide');
+  const counter = document.getElementById('slideCounter');
+  const dotsContainer = document.getElementById('slideDots');
+  let currentSlide = 0;
+
+  if (slides.length > 0) {
+    // Cria os pontinhos de navegação
+    slides.forEach((_, idx) => {
+      const dot = document.createElement('button');
+      dot.classList.add('slide-dot');
+      dot.setAttribute('aria-label', `Ir para slide ${idx + 1}`);
+      if (idx === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => showSlide(idx));
+      if (dotsContainer) dotsContainer.appendChild(dot);
+    });
+
+    function showSlide(index) {
+      if (index < 0) index = slides.length - 1;
+      if (index >= slides.length) index = 0;
+      currentSlide = index;
+
+      slides.forEach((s, idx) => {
+        s.classList.toggle('active', idx === currentSlide);
+      });
+
+      if (dotsContainer) {
+        dotsContainer.querySelectorAll('.slide-dot').forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === currentSlide);
+        });
+      }
+
+      if (counter) {
+        counter.textContent = `${currentSlide + 1} de ${slides.length}`;
+      }
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+    if (nextBtn) nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+
+    // Suporte a swipe no celular
+    const viewport = document.querySelector('.slide-viewport');
+    if (viewport) {
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      viewport.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      viewport.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        if (touchStartX - touchEndX > 50) {
+          showSlide(currentSlide + 1); // Swipe esquerda
+        } else if (touchEndX - touchStartX > 50) {
+          showSlide(currentSlide - 1); // Swipe direita
+        }
+      }, { passive: true });
+    }
+  }
+
   // Accordion FAQ
   document.querySelectorAll('.accordion-header').forEach(function (btn) {
     btn.addEventListener('click', function () {
@@ -91,7 +154,6 @@
       const encodedText = encodeURIComponent(texto);
       const whatsappUrl = `https://wa.me/5511995407942?text=${encodedText}`;
 
-      // Abre o WhatsApp com a mensagem formatada
       window.open(whatsappUrl, '_blank');
     });
   }
