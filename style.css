@@ -1126,3 +1126,52 @@ h2 {
     font-size: 1.6rem;
   }
 }
+
+/* GALERIA DE FOTOS AMPLIADA (SEM LEGENDA) */
+.gallery-section {
+  padding: 40px 0 85px;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+.gallery-item {
+  background: var(--branco);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(10, 35, 66, 0.08);
+  border: 1px solid var(--cinza-borda);
+  transition: var(--transicao);
+}
+.gallery-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 35px rgba(10, 35, 66, 0.16);
+  border-color: var(--dourado);
+}
+.gallery-item img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.gallery-item:hover img {
+  transform: scale(1.03);
+}
+.gallery-item-full {
+  grid-column: 1 / -1;
+}
+.gallery-item-full img {
+  height: 480px;
+}
+
+@media (max-width: 850px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .gallery-item img, .gallery-item-full img {
+    height: 300px;
+  }
+}

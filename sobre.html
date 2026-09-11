@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nós | MaxxiHouse Avaliações & Projetos</title>
+  <meta name="description" content="Conheça a história e o corpo técnico multidisciplinar da MaxxiHouse. Engenharia Civil, Arquitetura e Urbanismo com credenciamento CREA-SP e CAU-BR.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .team-card {
+      background: var(--branco);
+      border-radius: 16px;
+      padding: 36px 28px;
+      text-align: center;
+      box-shadow: var(--sombra-card);
+      border: 1px solid var(--cinza-borda);
+      transition: var(--transicao);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .team-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--sombra-hover);
+      border-color: var(--dourado);
+    }
+    .team-avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--azul-marinho), #1A365D);
+      color: var(--dourado);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      margin-bottom: 22px;
+      border: 3px solid var(--dourado);
+      box-shadow: 0 6px 15px rgba(10, 35, 66, 0.15);
+    }
+    .team-card h3 {
+      font-size: 1.35rem;
+      color: var(--azul-marinho);
+      margin-bottom: 6px;
+    }
+    .team-role {
+      display: inline-block;
+      color: var(--dourado-escuro);
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .team-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--cinza-claro);
+      color: var(--cinza-grafite);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 50px;
+      margin-bottom: 18px;
+      border: 1px solid var(--cinza-borda);
+    }
+    .team-bio {
+      color: var(--texto-suave);
+      font-size: 0.92rem;
+      line-height: 1.65;
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 35px;
+    }
+    .value-card {
+      background: var(--branco);
+      padding: 30px 24px;
+      border-radius: 12px;
+      border: 1px solid var(--cinza-borda);
+      box-shadow: var(--sombra-card);
+      text-align: center;
+    }
+    .value-card i {
+      font-size: 2.2rem;
+      color: var(--dourado);
+      margin-bottom: 14px;
+    }
+    .value-card h4 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+      color: var(--azul-marinho);
+    }
+    .value-card p {
+      font-size: 0.9rem;
+      color: var(--texto-suave);
+    }
+    @media (max-width: 992px) {
+      .team-grid, .values-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        MaxxiHouse <span>Avaliações & Projetos</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html#inicio">Início</a>
+        <a href="sobre.html" style="color:var(--dourado);font-weight:600;">Sobre Nós</a>
+        <a href="index.html#servicos">Serviços</a>
+        <a href="index.html#galeria">Projetos</a>
+        <a href="index.html#metodologia">Metodologia</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#orcamento" class="btn btn-primary" style="padding:8px 18px;font-size:0.88rem;">Solicitar Orçamento</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO SOBRE -->
+  <section class="hero" style="padding: 70px 0 80px;">
+    <div class="container" style="text-align: center; max-width: 850px;">
+      <div class="hero-tag" style="margin: 0 auto 20px;">
+        <i class="fa-solid fa-users"></i> Corpo Técnico & Sócios
+      </div>
+      <h1 style="font-size: 2.6rem; margin-bottom: 20px;">Excelência técnica unindo Engenharia e Arquitetura</h1>
+      <p style="margin: 0 auto 30px; font-size: 1.15rem;">A MaxxiHouse nasceu para oferecer rigor metodológico, fundamentação normativa e soluções completas em perícias, avaliações patrimoniais e projetos integrados.</p>
+      <a href="#equipe" class="btn btn-primary"><i class="fa-solid fa-arrow-down"></i> Conheça nossos sócios</a>
+    </div>
+  </section>
+
+  <!-- HISTÓRIA E PROPÓSITO -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Institucional</span>
+        <h2>A MaxxiHouse</h2>
+      </div>
+      <p class="section-text">A <strong>MaxxiHouse Avaliações & Projetos</strong> atua de maneira multidisciplinar, reunindo profissionais com sólida formação e ampla vivência nas áreas de <strong>Engenharia Civil</strong>, <strong>Arquitetura</strong> e <strong>Urbanismo</strong>.</p>
+      <p class="section-text">Nossa atuação é pautada estritamente pelas normas técnicas da ABNT (especialmente as séries NBR 14.653 e NBR 13.752) e pelas melhores práticas de engenharia diagnóstica, garantindo aos nossos clientes total tranquilidade em processos judiciais, negociações imobiliárias, partilhas, inventários e execuções de obras.</p>
+
+      <div class="values-grid">
+        <div class="value-card">
+          <i class="fa-solid fa-balance-scale"></i>
+          <h4>Precisão & Normas</h4>
+          <p>Laudos fundamentados cientificamente por inferência estatística e conformidade com as diretrizes da ABNT.</p>
+        </div>
+        <div class="value-card">
+          <i class="fa-solid fa-user-shield"></i>
+          <h4>Responsabilidade Técnica</h4>
+          <p>Todos os laudos e projetos possuem Anotação de Responsabilidade Técnica (ART/RRT) registrada no CREA-SP e CAU-BR.</p>
+        </div>
+        <div class="value-card">
+          <i class="fa-solid fa-handshake-angle"></i>
+          <h4>Abordagem Multidisciplinar</h4>
+          <p>Visão integrada entre engenharia civil diagnóstica e soluções arquitetônicas e urbanísticas sob medida.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORPO TÉCNICO E SÓCIOS -->
+  <section class="section section-alt" id="equipe">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Nossa Liderança</span>
+        <h2>Sócios & Corpo Técnico</h2>
+        <p class="section-text">Profissionais qualificados com registro nos principais conselhos de classe do país.</p>
+      </div>
+
+      <div class="team-grid">
+        <!-- DANIEL CARVALHO -->
+        <div class="team-card">
+          <div class="team-avatar">
+            <i class="fa-solid fa-user-gear"></i>
+          </div>
+          <h3>Daniel Carvalho</h3>
+          <span class="team-role">Engenheiro Civil</span>
+          <div class="team-badge">
+            <i class="fa-solid fa-id-badge"></i> Registro CREA-SP
+          </div>
+          <p class="team-bio">Especialista em avaliações imobiliárias com metodologia ABNT NBR 14.653, inferência estatística, engenharia diagnóstica, perícias prediais, vistorias técnicas e acompanhamento de obras.</p>
+        </div>
+
+        <!-- SYGLIA MENDONÇA -->
+        <div class="team-card">
+          <div class="team-avatar">
+            <i class="fa-solid fa-compass-drafting"></i>
+          </div>
+          <h3>Syglia Mendonça</h3>
+          <span class="team-role">Arquiteta e Urbanista</span>
+          <div class="team-badge">
+            <i class="fa-solid fa-id-badge"></i> Registro CAU-BR
+          </div>
+          <p class="team-bio">Especialista em desenvolvimento de projetos arquitetônicos residenciais e comerciais, planejamento de espaços, regularização imobiliária perante órgãos municipais e viabilidade urbanística.</p>
+        </div>
+
+        <!-- DOMINGOS LOPES -->
+        <div class="team-card">
+          <div class="team-avatar">
+            <i class="fa-solid fa-city"></i>
+          </div>
+          <h3>Domingos Lopes</h3>
+          <span class="team-role">Arquiteto e Urbanista</span>
+          <div class="team-badge">
+            <i class="fa-solid fa-id-badge"></i> Registro CAU-BR
+          </div>
+          <p class="team-bio">Especialista em compatibilização técnica de projetos, vistorias minuciosas de entrega de unidades autônomas, análise de diretrizes para condomínios e consultoria arquitetônica.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA DE CONTATO -->
+  <section class="cta-suporte">
+    <div class="container cta-inner">
+      <div class="cta-text">
+        <h2>Pronto para iniciar seu projeto ou laudo técnico?</h2>
+        <p>Converse diretamente com nosso corpo técnico especializado.</p>
+      </div>
+      <div>
+        <a href="https://wa.me/5511995407942" target="_blank" class="btn btn-primary" style="font-size:1.05rem;padding:16px 28px;">
+          <i class="fa-brands fa-whatsapp"></i> Falar pelo WhatsApp — (11) 99540-7942
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <h3>MaxxiHouse Avaliações & Projetos</h3>
+        <p><i class="fa-brands fa-whatsapp"></i> (11) 99540-7942</p>
+        <p><i class="fa-solid fa-envelope"></i> maxxihouse@gmail.com</p>
+        <p><i class="fa-solid fa-globe"></i> www.maxxihouse.eng.br</p>
+        <p><i class="fa-solid fa-id-card"></i> CNPJ: 19.403.562/0001-04</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Informações Legais</h3>
+        <div class="footer-links">
+          <a href="termos-politicas.html#privacidade"><i class="fa-solid fa-angle-right"></i> Política de Privacidade (LGPD)</a>
+          <a href="termos-politicas.html#confidencialidade"><i class="fa-solid fa-angle-right"></i> Aviso de Confidencialidade</a>
+          <a href="termos-politicas.html#termos"><i class="fa-solid fa-angle-right"></i> Termos de Uso</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Qualificações</h3>
+        <p><i class="fa-solid fa-certificate"></i> Registro CREA-SP & CAU-BR</p>
+        <p><i class="fa-solid fa-book"></i> Normas ABNT NBR 14.653</p>
+        <p><i class="fa-solid fa-location-dot"></i> Atendimento em São Paulo & Região</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 MaxxiHouse Avaliações & Projetos. Todos os direitos reservados. Engenharia Civil, Arquitetura & Urbanismo.</p>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT BUTTON -->
+  <a href="https://wa.me/5511995407942" class="whatsapp-float" target="_blank" aria-label="Falar pelo WhatsApp com a equipe">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
